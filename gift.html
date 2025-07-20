@@ -1,21 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Birthday Gift</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎉 Happy Birthday</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="gift-body">
-  <audio autoplay loop>
-    <source src="assets/audio/birthday.mp3" type="audio/mpeg">
+<body>
+  <audio autoplay loop id="bgMusic">
+    <source src="assets/audio/happy_birthday.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
   </audio>
-  <div class="gift-box">
-    <h1 id="giftTitle"></h1>
-    <p id="giftMessage"></p>
-    <div class="confetti"></div>
+  <div class="gift-container">
+    <h1 id="giftTitle">🎉 Happy Birthday!</h1>
+    <h2 id="name"></h2>
+    <p id="msg"></p>
   </div>
-  <script src="assets/js/gift.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const msg = params.get("msg");
+
+    document.getElementById("name").textContent = decodeURIComponent(name || "Friend");
+    document.getElementById("msg").textContent = decodeURIComponent(msg || "Wishing you a fantastic year ahead!");
+  </script>
 </body>
 </html>
