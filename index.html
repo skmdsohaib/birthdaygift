@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create a Birthday Gift</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Create a Birthday Surprise 🎁</h1>
+    <form id="giftForm">
+      <input type="text" id="name" placeholder="Friend's Name" required />
+      <textarea id="message" placeholder="Write a heartfelt message..." required></textarea>
+      <label for="theme">Choose a Theme:</label>
+      <select id="theme">
+        <option value="cake">Cake Party</option>
+        <option value="balloons">Balloons</option>
+        <option value="stars">Starry Night</option>
+      </select>
+      <button type="submit">Generate Gift Link</button>
+    </form>
+    <div id="linkContainer" style="display:none;">
+      <p>🎁 Share this link with your friend:</p>
+      <input type="text" id="giftLink" readonly />
+    </div>
+  </div>
+  <script src="assets/js/form.js"></script>
+</body>
+</html>
